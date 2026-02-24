@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <a href="#hero" id="hero-link" onclick="selectScreen('hero')">
+            <div class="dot"></div>
+            <span>Intro</span>
+        </a>
+        <a href="#contact" id="contact-link" onclick="selectScreen('contact')">
+            <div class="dot"></div>
+            <span>Contact</span>
+        </a>
+        <a href="#work" id="work-link" onclick="selectScreen('work')">
+            <div class="dot"></div>
+            <span>Work</span>
+        </a>
+    </nav>
+    <section id="hero" class="mainsect" style="background-color: none;">
+        <h1>Hi, I'm Ollie!</h1>
+        <div class="strip" style="transform: rotateZ(6deg);">
+            <span>Lorem</span>
+            <span>Ipsum</span>
+            <span>Dolor</span>
+            <span>Sit</span>
+            <span>Amet</span>
+        </div>
+    </section>
+    <section id="contact" class="mainsect" style="background-color: none;"></section>
+    <section id="work" class="mainsect" style="background-color: none;"></section>
+    <script>
+        const sections = document.querySelectorAll(".mainsect");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+
+                    // remove class from all nav links
+                    document.querySelectorAll('[id$="-link"]').forEach(link => {
+                        link.classList.remove("active");
+                    });
+
+                    // add class to matching link
+                    const link = document.getElementById(entry.target.id + "-link");
+                    if (link) {
+                        link.classList.add("active");
+                    }
+                }
+            });
+        }, {
+            threshold: 0.5   // section considered active when 50% visible
+        });
+
+        sections.forEach(section => observer.observe(section));
+
+        function selectScreen(id) {
+            document.querySelectorAll('[id$="-link"]').forEach(link => {
+                        link.classList.remove("active");
+                    });
+
+                    // add class to matching link
+                    const link = document.getElementById(id + "-link");
+                    if (link) {
+                        link.classList.add("active");
+                    }
+        }
+    </script>
+</body>
+
+</html>

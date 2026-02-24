@@ -1,0 +1,134 @@
+body {
+  font-family: "Gotham", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 0;
+
+  scroll-behavior: smooth;
+
+  background-image: radial-gradient(rgba(0, 0, 0, 0.1) 10%, transparent 10%);
+  background-position: 10px 10px;
+  background-size: 20px 20px;
+  background-color: rgb(255, 255, 255);
+
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+
+  width: max-content;
+  min-width: 86px;
+
+  transition: 0.75s;
+
+  padding: 6px;
+  border-radius: 16px;
+
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translate(0, -50%);
+}
+
+nav > a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+  gap: 6px;
+
+  width: max-content;
+
+  background-color: none;
+
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 300;
+
+  padding: 3px;
+  padding-left: 7px;
+  padding-right: 9px;
+  border-radius: 24px;
+
+  transition: 0.5s;
+}
+
+nav > a > div {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 100%;
+  width: 5px;
+  height: 5px;
+
+  transition: 0.25s;
+}
+
+nav > a > span {
+  background-color: none;
+  color: rgba(0, 0, 0, 0.2);
+
+  opacity: 0;
+
+  transition: 0.25s;
+}
+
+nav:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+
+  transition: 0.25s;
+}
+
+nav:hover > a > span {
+  opacity: 1;
+  width: max-content;
+
+  transition: 0.25s;
+}
+
+nav > a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: 0.25s;
+}
+
+nav > a:hover > span {
+  color: rgba(0, 0, 0, 0.8);
+  transition: 0.25s;
+}
+
+nav > a.active > div {
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: 0.25s;
+}
+
+section.mainsect {
+  width: 100%;
+  min-height: 100dvh;
+}
+
+
+div.strip {
+    width: 120dvw;
+    height: 32px;
+    background-color: rgb(194, 194, 212);
+    box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+    gap: 16px;
+}
+
+div.strip > span::before {
+    content: '';
+    background-color: white;
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    transform: translate(-7px, -2px);
+}
