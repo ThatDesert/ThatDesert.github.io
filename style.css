@@ -141,4 +141,37 @@ section.mainsect#fortunes {
 
   height: max-content;
   min-height: 0;
+
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+section.mainsect#hero {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+section.mainsect#hero > div.title {
+  width: 50%;
+  height: min-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: center;
+  justify-content: center;
+}
+
+hr {
+  width: 70% !important;
+  border: none;
+  border-top: 1px solid #000 !important;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  text-align: center;
 }

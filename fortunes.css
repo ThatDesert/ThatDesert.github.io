@@ -295,7 +295,7 @@
     width: 10px;
     height: 10px;
 
-    box-shadow: 1.5px 1.5px 0px 0px orange;
+    box-shadow: 2.5px 2.5px 0px 0px orange;
 
     border-radius: 100%;
 
@@ -307,9 +307,9 @@
 }
 
 .panel>a:hover {
-    box-shadow: 2.5px 2.5px 0px 0px orange;
-
-    transform: translate(-1px, -1px);
+    box-shadow: 1.5px 1.5px 0px 0px orange;
+    
+    transform: translate(1px, 1px);
 
     cursor: pointer;
 }
