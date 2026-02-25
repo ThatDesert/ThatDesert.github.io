@@ -132,3 +132,13 @@ div.strip > span::before {
     vertical-align: middle;
     transform: translate(-7px, -2px);
 }
+
+section.mainsect#fortunes {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+
+  height: max-content;
+  min-height: 0;
+}

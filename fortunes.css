@@ -1,0 +1,315 @@
+.cabinet {
+    background-color: rgb(165, 85, 42);
+    width: 86px;
+    height: 136px;
+    position: relative;
+
+    overflow: hidden;
+
+    font-family:'Times New Roman', Times, serif;
+}
+
+.tlco {
+    width: 20px;
+    height: 10px;
+    background-color: brown;
+    border-radius: 0 0 20px 0;
+
+    display: block;
+
+    position: absolute;
+    top: 18px;
+    left: 0;
+
+    z-index: 2;
+
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+.trco {
+    width: 20px;
+    height: 10px;
+    background-color: brown;
+    border-radius: 0 0 0 20px;
+
+    position: absolute;
+    top: 18px;
+    right: 0;
+
+    z-index: 2;
+
+    box-shadow: -1px 1px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.lwall {
+    width: 6px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background-color: brown;
+    z-index: 3;
+
+    box-shadow: 1px 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.rwall {
+    width: 6px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    background-color: brown;
+    z-index: 3;
+
+    box-shadow: -1px 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.banner {
+    position: absolute;
+    width: 100%;
+    height: 24px;
+    background-color: brown;
+    text-align: center;
+
+    color: bisque;
+    font-size: 14px;
+
+    z-index: 4;
+
+    border: 4px solid;
+    border-left-color: rgb(185, 55, 55);
+    border-right-color: rgb(147, 30, 30);
+    border-top-color: rgb(185, 51, 51);
+    border-bottom-color: rgb(129, 29, 29);
+
+    box-sizing: border-box;
+
+    box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.panel {
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: 35%;
+    background-color: brown;
+
+    box-sizing: border-box;
+
+    z-index: 4;
+
+    border: 6px solid;
+    border-left-color: rgb(185, 55, 55);
+    border-right-color: rgb(147, 30, 30);
+    border-top-color: rgb(185, 51, 51);
+    border-bottom-color: rgb(129, 29, 29);
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+    gap: 8px;
+}
+
+.inside {
+    width: 100%;
+    height: 70%;
+
+    background-color: burlywood;
+
+    position: relative;
+}
+
+.inside>.window {
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(141, 182, 235, 0.1);
+
+    z-index: 3;
+}
+
+.inside>.streak {
+    width: 4px;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 48px;
+    transform: rotate(32deg);
+
+    background-color: rgba(255, 255, 255, 0.1);
+
+    z-index: 2;
+}
+
+.inside>.teller {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.inside>.teller>.ball {
+    width: 18px;
+    height: 18px;
+    background-color: rgb(167, 69, 232);
+
+    position: absolute;
+    left: 34px;
+    right: 34px;
+    bottom: 12px;
+    border-radius: 100%;
+
+    box-shadow: 0px 0px 3px 2px rgb(192, 107, 249);
+
+    z-index: 3;
+}
+
+.inside>.teller>.stand {
+    width: 16px;
+    height: 12px;
+    background-color: rgb(244, 206, 160);
+
+    position: absolute;
+    left: 35px;
+    right: 35px;
+    bottom: 0;
+
+    border-radius: 2px 2px 0 0;
+
+    z-index: 4;
+}
+
+.inside>.teller>.body {
+    width: 70%;
+    height: 36px;
+    background-color: rgb(227, 176, 9);
+
+    position: absolute;
+
+    bottom: 0;
+    left: 15%;
+    right: 15%;
+    z-index: 0;
+
+    border-radius: 24px 24px 0 0;
+}
+
+.inside>.teller>.face {
+    width: 28px;
+    height: 28px;
+    background-color: rgb(235, 195, 141);
+
+    position: absolute;
+
+    bottom: 36px;
+    left: 29px;
+    right: 29px;
+    z-index: 1;
+
+    border-radius: 100%;
+}
+
+.inside>.teller>.beard {
+    width: 28px;
+    height: 28px;
+    background-color: none;
+
+    box-sizing: border-box;
+
+    border-top: 12px solid rgb(227, 176, 9);
+
+    border-radius: 100%;
+
+
+    margin-top: auto;
+    margin-bottom: 42px;
+    z-index: 2;
+
+    /* border-radius: 0 0 0 0; */
+}
+
+.inside>.teller>.nose {
+    width: 2px;
+    height: 2px;
+
+    border-bottom: 3px solid rgb(207, 167, 116);
+    border-right: 3px solid rgb(207, 167, 116);
+
+    transform: rotate(-45deg);
+
+
+    position: absolute;
+    left: 42.59px;
+    right: 40.59px;
+    bottom: 43.5px;
+    z-index: 2;
+}
+
+.panel>.slot {
+    width: 10px;
+    height: 2px;
+    background-color: aliceblue;
+
+    position: absolute;
+
+    top: 4px;
+}
+
+.panel>.prompt {
+    font-size: 8px;
+    width: 50%;
+
+    background-color: red;
+}
+
+.panel>.price {
+    font-size: 10px;
+
+    background-color: rgb(145, 32, 32);
+
+    width: max-content;
+    height: min-content;
+    text-align: center;
+    padding: 2px;
+
+    color: bisque;
+    border-radius: 3px;
+}
+
+.panel>a {
+    background-color: rgb(255, 206, 47);
+
+    display: block;
+
+    width: 10px;
+    height: 10px;
+
+    box-shadow: 1.5px 1.5px 0px 0px orange;
+
+    border-radius: 100%;
+
+    border: none;
+
+    font-size: 0px;
+
+    transition: 0.25s;
+}
+
+.panel>a:hover {
+    box-shadow: 2.5px 2.5px 0px 0px orange;
+
+    transform: translate(-1px, -1px);
+
+    cursor: pointer;
+}

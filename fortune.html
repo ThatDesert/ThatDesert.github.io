@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Teller</title>
+    <style>
+        body {
+            width: 100dvw;
+            height: 100dvh;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+
+            overflow: hidden;
+
+            gap: 48px;
+
+            background-color: black;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(-8px) rotate(2deg);
+            }
+
+            25% {
+                transform: translateY(8px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-8px) rotate(-2deg);
+            }
+
+            75% {
+                transform: translateY(8px) rotate(0deg);
+            }
+
+            100% {
+                transform: translateY(-8px) rotate(2deg);
+            }
+
+        }
+
+        div.fortune {
+            background-color: antiquewhite;
+            padding: 16px;
+
+            border-radius: 3px;
+
+            /* box-shadow: 2px 2px 2px #0000001d; */
+
+            position: relative;
+
+            font-size: 17px;
+
+            color: rgb(228, 168, 55);
+
+            animation-name: float;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: both;
+            animation-direction: normal;
+            animation-timing-function: ease-in-out;
+
+            max-width: 142px;
+        }
+
+        div.fortune::before {
+            content: '✨';
+
+            font-size: 18px;
+            position: absolute;
+            left: -12px;
+            top: -12px;
+
+            transform: rotate(-15deg);
+        }
+
+        div.fortune::after {
+            content: '✨';
+
+            font-size: 18px;
+            position: absolute;
+            right: -12px;
+            bottom: -12px;
+
+            transform: rotate(15deg);
+        }
+
+        div.fortune>svg {
+            position: absolute;
+            bottom: 99.5%;
+            left: 0;
+
+            fill: antiquewhite;
+            z-index: -1;
+
+        }
+    </style>
+    <link rel="stylesheet" href="fortunes.css">
+</head>
+
+<body>
+    <div class="cabinet">
+        <div class="banner">FORTUNES</div>
+        <div class="tlco"></div>
+        <div class="trco"></div>
+        <div class="lwall"></div>
+        <div class="rwall"></div>
+        <div class="inside">
+            <div class="window"></div>
+            <div class="streak"></div>
+            <div class="teller">
+                <div class="ball"></div>
+                <div class="stand"></div>
+                <div class="nose"></div>
+                <div class="face"></div>
+                <div class="body"></div>
+                <div class="beard"></div>
+            </div>
+        </div>
+        <div class="panel">
+            <!-- <div class="prompt">Have your fortune told</div> -->
+            <div class="slot"></div>
+            <div class="price">£1 &rarr;</div>
+            <a></a>
+        </div>
+    </div>
+    <div class="fortune" id="fortunecontainer" hidden>
+        <svg id="visual" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+            <path
+                d="M0 511L82 570L164 555L245 508L327 535L409 579L491 550L573 573L655 552L736 523L818 546L900 522L900 601L818 601L736 601L655 601L573 601L491 601L409 601L327 601L245 601L164 601L82 601L0 601Z">
+            </path>
+        </svg>
+        <span id="fortune">You will soon be swept off your feet by a romantic partner with a questionable credit
+            score.</span>
+    </div>
+    <script>
+        const fortune = document.getElementById("fortune")
+        document.getElementById("fortunecontainer").hidden = true;
+
+        let params = new URL(document.location.toString()).searchParams;
+        let id = params.get("fortune");
+
+        async function loadData() {
+            let response = await fetch(`https://fortune-teller.oliver-kotla.workers.dev/fortune?id=${id}`);
+
+            if (!response.ok) {
+                console.log("HTTP Error:", response.status);
+                return;
+            }
+
+            let data = await response.json();
+            if (data.error === 0) {
+                document.getElementById("fortunecontainer").hidden = false;
+                fortune.innerText = data.fortune;
+            }
+        }
+
+        if (id !== null) {
+            loadData()
+        }
+    </script>
+</body>
+
+</html>

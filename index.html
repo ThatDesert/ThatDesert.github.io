@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fortunes.css">
 </head>
 
 <body>
@@ -13,6 +14,10 @@
         <a href="#hero" id="hero-link" onclick="selectScreen('hero')">
             <div class="dot"></div>
             <span>Intro</span>
+        </a>
+        <a href="#fortunes" id="fortunes-link" onclick="selectScreen('fortunes')">
+            <div class="dot"></div>
+            <span>Fortunes</span>
         </a>
         <a href="#contact" id="contact-link" onclick="selectScreen('contact')">
             <div class="dot"></div>
@@ -25,12 +30,39 @@
     </nav>
     <section id="hero" class="mainsect" style="background-color: none;">
         <h1>Hi, I'm Ollie!</h1>
-        <div class="strip" style="transform: rotateZ(6deg);">
+        <!-- <div class="strip" style="transform: rotateZ(6deg);">
             <span>Lorem</span>
             <span>Ipsum</span>
             <span>Dolor</span>
             <span>Sit</span>
             <span>Amet</span>
+        </div> -->
+    </section>
+    <section id="fortunes" class="mainsect">
+        <div class="cabinet">
+            <div class="banner">FORTUNES</div>
+            <div class="tlco"></div>
+            <div class="trco"></div>
+            <div class="lwall"></div>
+            <div class="rwall"></div>
+            <div class="inside">
+                <div class="window"></div>
+                <div class="streak"></div>
+                <div class="teller">
+                    <div class="ball"></div>
+                    <div class="stand"></div>
+                    <div class="nose"></div>
+                    <div class="face"></div>
+                    <div class="body"></div>
+                    <div class="beard"></div>
+                </div>
+            </div>
+            <div class="panel">
+                <!-- <div class="prompt">Have your fortune told</div> -->
+                <div class="slot"></div>
+                <div class="price">£1 &rarr;</div>
+                <a title="Purchase Fortune" id="buy-fortune" href="https://buy.stripe.com/test_aFa28rfei72V6ec0kn3VC00">Purchase Fortune</a>
+            </div>
         </div>
     </section>
     <section id="contact" class="mainsect" style="background-color: none;"></section>
@@ -62,14 +94,14 @@
 
         function selectScreen(id) {
             document.querySelectorAll('[id$="-link"]').forEach(link => {
-                        link.classList.remove("active");
-                    });
+                link.classList.remove("active");
+            });
 
-                    // add class to matching link
-                    const link = document.getElementById(id + "-link");
-                    if (link) {
-                        link.classList.add("active");
-                    }
+            // add class to matching link
+            const link = document.getElementById(id + "-link");
+            if (link) {
+                link.classList.add("active");
+            }
         }
     </script>
 </body>
