@@ -29,15 +29,15 @@
             }
 
             25% {
-                transform: translateY(8px) rotate(0deg);
+                transform: translateY(8px) rotate(-2deg);
             }
 
             50% {
-                transform: translateY(-8px) rotate(-2deg);
+                transform: translateY(-8px) rotate(2deg);
             }
 
             75% {
-                transform: translateY(8px) rotate(0deg);
+                transform: translateY(8px) rotate(4deg);
             }
 
             100% {
@@ -58,7 +58,7 @@
 
             font-size: 17px;
 
-            color: rgb(228, 168, 55);
+            color: rgb(166, 119, 32);
 
             animation-name: float;
             animation-duration: 6s;
@@ -101,6 +101,23 @@
             z-index: -1;
 
         }
+
+        div#loader {
+            background-color: antiquewhite;
+
+            border: 6px double rgb(228, 168, 55);
+
+            color: rgb(166, 119, 32);
+            
+            padding: 4px;
+
+            animation-name: float;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: both;
+            animation-direction: normal;
+            animation-timing-function: ease-in-out;
+        }
     </style>
     <link rel="stylesheet" href="fortunes.css">
 </head>
@@ -131,6 +148,9 @@
             <a href="https://buy.stripe.com/dRmfZh0Figos40OgX70kE00">Purchase Fortune</a>
         </div>
     </div>
+    <div id="loader">
+        Thinking...
+    </div>
     <div class="fortune" id="fortunecontainer" hidden>
         <svg id="visual" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
@@ -158,6 +178,7 @@
 
             let data = await response.json();
             if (data.error === 0) {
+                document.getElementById("loader").hidden = true;
                 document.getElementById("fortunecontainer").hidden = false;
                 fortune.innerText = data.fortune;
             }
