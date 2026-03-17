@@ -221,12 +221,14 @@ div.herodivider {
   margin-top: 8px;
   margin-bottom: 8px;
 }
-div.herodivider p {
+div.herodivider p, div.herodivider a {
   font-family: "Prompt", sans-serif;
   font-weight: 600;
   font-size: 12px;
   text-transform: uppercase;
   margin: 0;
+  text-decoration: none;
+  color: #000;
   width: -moz-max-content;
   width: max-content;
   text-wrap: nowrap;

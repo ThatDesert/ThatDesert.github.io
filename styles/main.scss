@@ -202,7 +202,7 @@ div.herodivider {
       margin-top: 8px;
       margin-bottom: 8px;
 
-      p {
+      p, a {
         font-family: 'Prompt', sans-serif;
         font-weight: 600;
         font-size: 12px;
@@ -210,6 +210,9 @@ div.herodivider {
         text-transform: uppercase;
 
         margin: 0;
+
+        text-decoration: none;
+        color: #000;
 
         width: max-content;
         text-wrap: nowrap;
