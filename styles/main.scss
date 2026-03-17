@@ -1,0 +1,228 @@
+@use 'nav';
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+body {
+  // font-family: "Gotham", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 64px;
+
+  scroll-behavior: smooth;
+
+  background-image: radial-gradient(rgba(0, 0, 0, 0.1) 10%, transparent 10%);
+  background-position: 10px 10px;
+  background-size: 20px 20px;
+  background-color: rgb(255, 255, 255);
+
+  background-attachment: fixed;
+
+  overflow-x: hidden;
+}
+
+section {
+  &.mainsect {
+    width: 100%;
+    min-height: 80dvh;
+  }
+
+  &#hero {
+    position: relative;
+
+    h1 {
+      font-family: 'Prompt';
+      font-size: 15dvw;
+      font-weight: 1000;
+
+      line-height: 0.8;
+
+      text-align: left;
+
+      margin: 0;
+
+      width: fit-content;
+    }
+
+    h2 {
+      font-family: 'Roboto Mono', sans-serif;
+      font-weight: 300;
+      
+      font-size: 12px;
+
+      max-width: 80dvw;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-content: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+
+      gap: 16px;
+      
+      margin: 0;
+      padding: 0;
+      margin-top: 16px;
+
+      span {
+        background-color: rgba(0, 0, 0, 0.1);
+        padding-top: 3px;
+        padding-bottom: 3px;
+
+        padding-left: 10px;
+        padding-right: 10px;
+
+        border-radius: 999px;
+
+        &.cta {
+          background: none;
+          border: 1px solid #000;
+
+          box-sizing: border-box;
+
+          transition: 0.25s;
+
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+          }
+
+          a {
+            text-decoration: none;
+            color: #000;
+            font-weight: 400;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            gap: 4px;
+
+            svg {
+              width: 12px;
+              height: 12px;
+            }
+          }
+        }
+      }
+    }
+
+    ul.social {
+
+      margin: 0;
+      padding: 0;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+
+      width: fit-content;
+      height: 32px;
+
+      position: absolute;
+
+      top: 0;
+      right: 0;
+
+      li {
+        list-style: none;
+        width: 32px;
+        height: 32px;
+
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+
+        padding: 0;
+        margin: 0;
+
+        a {
+          margin: 0;
+          padding: 0;
+
+          height: 32px;
+          width: 32px;
+
+          svg {
+            width: 32px;
+            height: 32px;
+          }
+        }
+      }
+    }
+  }
+
+  &#work {
+    div.grid {
+      display: grid;
+
+      margin-left: auto;
+      margin-right: auto;
+
+      width: fit-content;
+      min-height: 32px;
+
+      grid-template-columns: 17dvw 17dvw 17dvw 17dvw;
+      grid-template-rows: 17dvw 17dvw;
+      gap: 18px;
+
+      div {
+        width: 100%;
+        height: 100%;
+
+        backdrop-filter: blur(2px) saturate(180%);
+        -webkit-backdrop-filter: blur(2px) saturate(180%);
+        background-color: rgba(113, 113, 113, 0.15);
+
+        border: 1px solid rgba(0, 0, 0, 0.3);
+
+        border-radius: 8px;
+
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+div.herodivider {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-content: center;
+      justify-content: space-between;
+
+      gap: 8px;
+
+      margin-top: 8px;
+      margin-bottom: 8px;
+
+      p {
+        font-family: 'Prompt', sans-serif;
+        font-weight: 600;
+        font-size: 12px;
+
+        text-transform: uppercase;
+
+        margin: 0;
+
+        width: max-content;
+        text-wrap: nowrap;
+      }
+
+      hr {
+        width: 100%;
+        border: none;
+        border-top: 2px solid #000;
+      }
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }

@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: -moz-max-content;
+  width: max-content;
+  min-width: 86px;
+  transition: 0.75s;
+  padding: 6px;
+  border-radius: 16px;
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translate(0, -50%);
+  z-index: 999;
+  font-family: "Roboto Mono", sans-serif;
+}
+nav:hover {
+  background-color: rgb(255, 255, 255);
+  transition: 0.25s;
+}
+nav:hover a > span {
+  opacity: 1;
+  width: -moz-max-content;
+  width: max-content;
+  transition: 0.25s;
+}
+nav a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+  gap: 6px;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: none;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 3px;
+  padding-left: 7px;
+  padding-right: 9px;
+  border-radius: 24px;
+  transition: 0.5s;
+}
+nav a.active > div {
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: 0.25s;
+}
+nav a div {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 100%;
+  width: 5px;
+  height: 5px;
+  transition: 0.25s;
+}
+nav a span {
+  background-color: none;
+  color: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: 0.25s;
+}
+nav a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: 0.25s;
+}
+nav a:hover span {
+  color: rgba(0, 0, 0, 0.8);
+  transition: 0.25s;
+}
+
+body {
+  margin: 64px;
+  scroll-behavior: smooth;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.1) 10%, transparent 10%);
+  background-position: 10px 10px;
+  background-size: 20px 20px;
+  background-color: rgb(255, 255, 255);
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+section.mainsect {
+  width: 100%;
+  min-height: 80dvh;
+}
+section#hero {
+  position: relative;
+}
+section#hero h1 {
+  font-family: "Prompt";
+  font-size: 15dvw;
+  font-weight: 1000;
+  line-height: 0.8;
+  text-align: left;
+  margin: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+section#hero h2 {
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  max-width: 80dvw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  margin-top: 16px;
+}
+section#hero h2 span {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 999px;
+}
+section#hero h2 span.cta {
+  background: none;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  transition: 0.25s;
+}
+section#hero h2 span.cta:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+section#hero h2 span.cta a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  gap: 4px;
+}
+section#hero h2 span.cta a svg {
+  width: 12px;
+  height: 12px;
+}
+section#hero ul.social {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 32px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+section#hero ul.social li {
+  list-style: none;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+section#hero ul.social li a {
+  margin: 0;
+  padding: 0;
+  height: 32px;
+  width: 32px;
+}
+section#hero ul.social li a svg {
+  width: 32px;
+  height: 32px;
+}
+section#work div.grid {
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-height: 32px;
+  grid-template-columns: 17dvw 17dvw 17dvw 17dvw;
+  grid-template-rows: 17dvw 17dvw;
+  gap: 18px;
+}
+section#work div.grid div {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2px) saturate(180%);
+  -webkit-backdrop-filter: blur(2px) saturate(180%);
+  background-color: rgba(113, 113, 113, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
+}
+section#work div.grid div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+div.herodivider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+div.herodivider p {
+  font-family: "Prompt", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin: 0;
+  width: -moz-max-content;
+  width: max-content;
+  text-wrap: nowrap;
+}
+div.herodivider hr {
+  width: 100%;
+  border: none;
+  border-top: 2px solid #000;
+}
+div.herodivider svg {
+  width: 16px;
+  height: 16px;
+}/*# sourceMappingURL=main.css.map */
