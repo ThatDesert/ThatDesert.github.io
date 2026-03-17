@@ -45,9 +45,12 @@ nav a {
   border-radius: 24px;
   transition: 0.5s;
 }
-nav a.active > div {
+nav a.active div {
   background-color: rgba(0, 0, 0, 0.7);
   transition: 0.25s;
+}
+nav a.active span {
+  color: #000;
 }
 nav a div {
   background-color: rgba(0, 0, 0, 0.2);
@@ -155,17 +158,18 @@ section#hero ul.social {
   align-items: center;
   align-content: center;
   justify-content: center;
+  gap: 6px;
   width: -moz-fit-content;
   width: fit-content;
-  height: 32px;
+  height: 24px;
   position: absolute;
   top: 0;
   right: 0;
 }
 section#hero ul.social li {
   list-style: none;
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   display: flex;
   align-items: center;
   align-content: center;
@@ -176,12 +180,23 @@ section#hero ul.social li {
 section#hero ul.social li a {
   margin: 0;
   padding: 0;
-  height: 32px;
-  width: 32px;
+  height: 24px;
+  width: 24px;
 }
 section#hero ul.social li a svg {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
+}
+section#hero img.duck {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 25%;
+}
+@media (max-width: 850px) {
+  section#hero img.duck {
+    display: none;
+  }
 }
 section#work div.grid {
   display: grid;
@@ -204,11 +219,42 @@ section#work div.grid div {
   border-radius: 8px;
   overflow: hidden;
 }
+section#work div.grid div a {
+  width: 100%;
+  height: 100%;
+  transition: 0.15s;
+}
+section#work div.grid div a:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+section#work div.grid div a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 section#work div.grid div img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+section#work div.grid div.vertical {
+  grid-column-start: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+@media (max-width: 590px) {
+  section#work div.grid {
+    grid-template-columns: 30dvw 30dvw;
+    grid-template-rows: 30dvw 30dvw 30dvw 30dvw;
+  }
+  section#work div.grid div.vertical {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
 }
 
 div.herodivider {
@@ -221,7 +267,8 @@ div.herodivider {
   margin-top: 8px;
   margin-bottom: 8px;
 }
-div.herodivider p, div.herodivider a {
+div.herodivider p,
+div.herodivider a {
   font-family: "Prompt", sans-serif;
   font-weight: 600;
   font-size: 12px;
@@ -233,12 +280,15 @@ div.herodivider p, div.herodivider a {
   width: max-content;
   text-wrap: nowrap;
 }
-div.herodivider hr {
+div.herodivider svg {
+  width: 16px;
+  min-width: 16px;
+  height: 16px;
+  min-height: 16px;
+}
+
+hr {
   width: 100%;
   border: none;
   border-top: 2px solid #000;
-}
-div.herodivider svg {
-  width: 16px;
-  height: 16px;
 }/*# sourceMappingURL=main.css.map */
