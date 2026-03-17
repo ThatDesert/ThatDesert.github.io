@@ -158,18 +158,18 @@ section#hero ul.social {
   align-items: center;
   align-content: center;
   justify-content: center;
-  gap: 6px;
+  gap: 3px;
   width: -moz-fit-content;
   width: fit-content;
-  height: 24px;
+  height: 22px;
   position: absolute;
   top: 0;
   right: 0;
 }
 section#hero ul.social li {
   list-style: none;
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   display: flex;
   align-items: center;
   align-content: center;
@@ -180,12 +180,12 @@ section#hero ul.social li {
 section#hero ul.social li a {
   margin: 0;
   padding: 0;
-  height: 24px;
-  width: 24px;
+  height: 22px;
+  width: 22px;
 }
 section#hero ul.social li a svg {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
 }
 section#hero img.duck {
   position: absolute;
