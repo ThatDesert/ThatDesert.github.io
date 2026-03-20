@@ -1,9 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+body {
+  margin: 64px;
+  scroll-behavior: smooth;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.1) 10%, transparent 10%);
+  background-position: 10px 10px;
+  background-size: 20px 20px;
+  background-color: rgb(255, 255, 255);
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
 nav {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  width: -moz-max-content;
   width: max-content;
   min-width: 86px;
   transition: 0.75s;
@@ -22,7 +32,6 @@ nav:hover {
 }
 nav:hover a > span {
   opacity: 1;
-  width: -moz-max-content;
   width: max-content;
   transition: 0.25s;
 }
@@ -33,7 +42,6 @@ nav a {
   align-content: center;
   justify-content: flex-start;
   gap: 6px;
-  width: -moz-max-content;
   width: max-content;
   background-color: none;
   text-decoration: none;
@@ -74,17 +82,6 @@ nav a:hover span {
   transition: 0.25s;
 }
 
-body {
-  margin: 64px;
-  scroll-behavior: smooth;
-  background-image: radial-gradient(rgba(0, 0, 0, 0.1) 10%, transparent 10%);
-  background-position: 10px 10px;
-  background-size: 20px 20px;
-  background-color: rgb(255, 255, 255);
-  background-attachment: fixed;
-  overflow-x: hidden;
-}
-
 section.mainsect {
   width: 100%;
   min-height: 80dvh;
@@ -99,7 +96,6 @@ section#hero h1 {
   line-height: 0.8;
   text-align: left;
   margin: 0;
-  width: -moz-fit-content;
   width: fit-content;
 }
 section#hero h2 {
@@ -159,7 +155,6 @@ section#hero ul.social {
   align-content: center;
   justify-content: center;
   gap: 3px;
-  width: -moz-fit-content;
   width: fit-content;
   height: 22px;
   position: absolute;
@@ -193,6 +188,11 @@ section#hero img.duck {
   top: 0;
   width: 25%;
 }
+@media (max-width: 475px) {
+  section#hero ul.social {
+    display: none;
+  }
+}
 @media (max-width: 850px) {
   section#hero img.duck {
     display: none;
@@ -202,7 +202,6 @@ section#work div.grid {
   display: grid;
   margin-left: auto;
   margin-right: auto;
-  width: -moz-fit-content;
   width: fit-content;
   min-height: 32px;
   grid-template-columns: 17dvw 17dvw 17dvw 17dvw;
@@ -231,14 +230,12 @@ section#work div.grid div a:hover {
 section#work div.grid div a img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 section#work div.grid div img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 section#work div.grid div.vertical {
   grid-column-start: 3;
@@ -276,7 +273,6 @@ div.herodivider a {
   margin: 0;
   text-decoration: none;
   color: #000;
-  width: -moz-max-content;
   width: max-content;
   text-wrap: nowrap;
 }
@@ -291,4 +287,4 @@ hr {
   width: 100%;
   border: none;
   border-top: 2px solid #000;
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=homepage.css.map */

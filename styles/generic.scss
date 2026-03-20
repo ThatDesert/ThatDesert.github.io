@@ -1,0 +1,144 @@
+@use 'fonts';
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Prompt', sans-serif;
+}
+
+h1 {
+    font-weight: 1000;
+    letter-spacing: 0.5px;
+
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-left: 2px;
+}
+
+h3 {
+    margin-left: 4px;
+}
+
+h4 {
+    margin-left: 6px;
+}
+
+h5 {
+    margin-left: 8px;
+}
+
+h6 {
+    margin-left: 10px;
+}
+
+code {
+    background-color: black;
+    display: block;
+    width: 100%;
+
+    color: #00ff1a;
+    padding: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 4px;
+
+    margin-top: 8px;
+}
+
+p {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 450;
+  line-height: 1.4;
+
+  margin: 0;
+  padding: 0;
+
+  margin-top: 8px;
+
+  code {
+    color: #00ff1a;
+    display: inline;
+    width: auto;
+    background-color: rgb(0, 0, 0);
+    padding: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+
+    border-radius: 4px;
+  }
+
+  kbd {
+    padding: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+
+    border-radius: 4px;
+    border: 1px solid #000;
+
+    box-sizing: border-box;
+  }
+}
+
+kbd, code {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 350;
+}
+
+details {
+    border: 1px solid #000;
+
+    padding: 8px;
+
+    border-radius: 4px;
+
+    summary {
+        font-family: 'Prompt', sans-serif;
+        font-weight: 300;
+
+        font-size: 0.8rem;
+    }
+
+    &:open > summary {
+        border-bottom: 1px solid #000;
+    }
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #000;
+}
+
+blockquote {
+    border-left: 4px solid grey;
+
+    margin: 0;
+    margin-left: 4px;
+
+    padding-left: 8px;
+
+    font-family: 'Roboto Mono', monospace;
+    font-style: italic;
+
+    font-size: 0.7rem;
+    font-weight: 500;
+
+    cite {
+        font-size: 0.6rem;
+        color: grey;
+        font-weight: 300;
+
+        display: block;
+    }
+}
+
+ul, ol {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.8rem;
+    padding-left: 18px;
+}
